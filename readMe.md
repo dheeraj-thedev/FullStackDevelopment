@@ -1,6 +1,3 @@
-![blockvsInline](https://user-images.githubusercontent.com/32265439/111888866-79a18f00-8a06-11eb-9504-22a0329d745d.png)
-
-
 ### Important Links for Discussion - difference between block level or inline
 
 https://stackoverflow.com/questions/1714121/block-level-elements-inside-inline-elements#:~:text=An%20element%20defined%20as%20a,%3B%22%3ELorem...&text=The%20will%20still%20be,in%20the%20eyes%20of%20HTML.
@@ -42,26 +39,10 @@ https://googlechrome.github.io/samples/allow-popups-to-escape-sandbox/
 https://stackoverflow.com/questions/29125274/is-there-an-alternative-to-the-seamless-attribute-that-works-in-all-browsers
 
 
-function parseURLParams(url) {
-    var queryStart = url.indexOf("?") + 1,
-        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
-        query = url.slice(queryStart, queryEnd - 1),
-        pairs = query.replace(/\+/g, " ").split("&"),
-        parms = {}, i, n, v, nv;
 
-    if (query === url || query === "") return;
 
-    for (i = 0; i < pairs.length; i++) {
-        nv = pairs[i].split("=", 2);
-        n = decodeURIComponent(nv[0]);
-        v = decodeURIComponent(nv[1]);
 
-        if (!parms.hasOwnProperty(n)) parms[n] = [];
-        parms[n].push(nv.length === 2 ? v : null);
-    }
-    return parms;
-}
-
+![blockvsInline](https://user-images.githubusercontent.com/32265439/111888866-79a18f00-8a06-11eb-9504-22a0329d745d.png)
 
 
 
