@@ -1,3 +1,6 @@
+![blockvsInline](https://user-images.githubusercontent.com/32265439/111888866-79a18f00-8a06-11eb-9504-22a0329d745d.png)
+
+
 ### Important Links for Discussion - difference between block level or inline
 
 https://stackoverflow.com/questions/1714121/block-level-elements-inside-inline-elements#:~:text=An%20element%20defined%20as%20a,%3B%22%3ELorem...&text=The%20will%20still%20be,in%20the%20eyes%20of%20HTML.
