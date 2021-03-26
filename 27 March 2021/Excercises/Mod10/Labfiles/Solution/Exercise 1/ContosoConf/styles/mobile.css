@@ -1,0 +1,27 @@
+/* Styles for smaller browsers e.g. phones and tablets */
+
+@media screen and (max-width: 960px) {
+    
+    nav.page-nav .container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: center;
+        flex-pack: center;
+    }
+    
+    nav.page-nav a {
+        border: 1px dotted #3D3D3D;
+        margin: .5rem;
+        padding: 0 .8rem;
+    }
+    
+    nav.page-nav .active:before,
+    nav.page-nav .active:after {
+        display: none;
+    }
+
+    
+}
+
