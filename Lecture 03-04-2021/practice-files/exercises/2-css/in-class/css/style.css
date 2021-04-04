@@ -6,6 +6,7 @@ body {
 }
 img {
     border: 10px solid green;
+    transform: translate(25px,50px);    
 }
 h1 {
     border: 5px dotted red;
@@ -67,6 +68,10 @@ a.harvard {
 
 
 
+#experienceSelect{
+    width: 30em;
+}
 
-
-
+option[selected]{
+    color:red;
+}

@@ -1,0 +1,79 @@
+
+/* Element Selctor */
+/* Web  many option to perform color 
+    rgb
+    rgba
+    hsl
+    hsla
+    Hex
+*/
+
+.left{
+    float: left;
+}
+
+h1{
+    border: 5px dashed  green;
+    background-color: black;
+    color: wheat;
+    text-align: center;
+}
+
+.profile{
+    height: 100px;
+    width: 150px;
+    float: left;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffcc;
+}
+/* specified pagraph having class redFont */
+p.redFont{
+    color: red;
+    text-indent: 30%;
+}
+/* More specifically stated 
+span under p */
+p span{
+    color:green;
+    font-weight: bolder;
+}
+
+#nothero{
+    text-decoration: blink;
+}
+
+blockquote{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem; /* rem rm percent  */   
+    font-style: italic;
+    text-align: center;
+    color: white;
+}
+
+cite{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+
+}
+
+.profile-pic{
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+}
+
+/* We have used a class selector */
+
+.bigBold{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.row{
+    width: 100%;
+}
+
