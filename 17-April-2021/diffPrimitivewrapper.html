@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div id="data"></div>
+
+</body>
+
+<script>
+    // Primitive 
+    // let language="Javascript";
+    // language.cat="ES6";
+    // console.log(language.cat); // undefined 
+    //                             // is only 
+    // // Wrapper
+    // let language= new String("Javascript");
+    // language.cat="ES6";
+    // console.log(language.cat);
+
+    // Re write wapper in Es6 way
+
+//     let language= {
+//         name:"JavaScript"
+//     }
+// let languageoldStyle = new String("Javascript");
+
+//     console.log(language.name);
+
+let num1=10;
+let num2=123;
+
+  let res= eval(num1*num2)+"<br>";
+  let res1= eval(num1*34)+"<br>";
+  document.getElementById('data').innerHTML=res+res1;
+</script>
+</html>

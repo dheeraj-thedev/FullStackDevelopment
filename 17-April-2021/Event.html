@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="mYbtn" style="color: green;" onmouseover="changeColor()" onmouseout="changeBack()">Some Value</button>
+
+</body>
+
+<script>
+    function changeColor(){
+        document.getElementById('mYbtn').style.backgroundColor="Red";
+    }
+    function changeBack(){
+        document.getElementById('mYbtn').style.backgroundColor="green";
+    }
+</script>
+</html>
