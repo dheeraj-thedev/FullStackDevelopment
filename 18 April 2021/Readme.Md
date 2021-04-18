@@ -12,10 +12,11 @@
 Explanation on how everything worked :- 
 
 
-$().ready(
+$().ready(   // an Event Handler that says on page load complete
     function(){
-        $('#BtnSubmit').click(function(){ 
-            let number = $('#UName').val();
+        $('#BtnSubmit').click(function(){  // an Event handler that says on click of button
+            let number = $('#UName').val();  // we have just got the val 
+                                                as we id                              //in javascript with value 
             alert(number);
         })
         
