@@ -3,7 +3,7 @@
 #####    Create a UI to add product details on html documnet 
 -        productName  -> input:text
 -        productImage > input:image upload
--        price          > imput: text
+-        price          > imput: number
 
 -        Example for an idea   https://www.jqueryscript.net/demo/Simple-Shopping-Cart-Plugin-With-jQuery-Bootstrap-mycart/
 
