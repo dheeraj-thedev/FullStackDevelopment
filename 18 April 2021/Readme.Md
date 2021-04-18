@@ -21,9 +21,23 @@ The jQuery library contains the following features:
         i) CDN
         ii) Download the library with HTML
 
+```sh
+        <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 1 Example Using cDN -->
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  -->
 
+     <!-- 2 Example Download Library -->
+     <script src="./jquery.min.js"></script> 
+       <!-- Step 1 -->
+
+</head>
+```
 Explanation on how everything worked :- 
-
+```
 
 $().ready(   // an Event Handler that says on page load complete
     function(){
@@ -35,5 +49,5 @@ $().ready(   // an Event Handler that says on page load complete
         
     }
 );
-
+```
     
