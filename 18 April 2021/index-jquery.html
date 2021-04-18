@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 1 Example Using cDN -->
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  -->
+
+     <!-- 2 Example Download Library -->
+     <script src="./jquery.min.js"></script> 
+       <!-- Step 1 -->
+
+</head>
+<body>
+  <label for="UName">User Name </label>  <input type="number" id="UName">
+<button id="BtnSubmit">ClickMe To Get value</button>
+<button id="btnFadein">Do Fadein</button>
+<button id="btnFadeout">Do Fade Out</button>
+
+    <div>
+        <div class="d1">
+            <a href="Google.com">My Ancor Google Link </a>    
+            <a href="Google.com">My Google Link </a>  
+            <a href="Google.com">My Google Link </a>  
+            <a href="Google.com">My Google Link </a>  
+            <a href="Google.com">My Google Link </a>  
+            <a href="Google.com">My Google Link </a><a href="Google.com">My Google Link </a> 
+        </div>
+    </div>
+
+
+  <div id="ResultDiv">
+
+
+
+
+
+ 
+    <!-- <table>
+        <thead><th></th></thead>
+    </table>
+    <table id="table">
+        <tr>
+            <td>Num</td>
+            <td>X</td>
+            <td>1</td>
+            <td>=</td>
+            <tb>(Num*1)</tb>
+
+        </tr>
+    </table> -->
+
+  </div>  
+
+</body>
+
+<script>
+
+// we need to print a table for the number being ectered
+// this is just a selector that is selecting my DOM
+
+
+$().ready(function(){
+    $('#btnFadeout').click(function(){
+        $('a').hide().delay(500).fadeIn(150); // chaining
+    });
+});
+
+$().ready(function(){
+    $('#btnFadein').click(function(){
+        $('a').show().delay(500).fadeOut(1500);
+    });
+});
+
+$(document).ready(
+    function(){
+        $('#BtnSubmit').click(function(){ 
+
+
+            // $('a').array.forEach(element => {
+            //     element
+            // });
+             let anchor = $('a');  // chahing all the anchor tags 
+            // anchor.each(function(index){
+            //     if(index%2==0){
+            //         anchor.get(index).textContent="Some Example  EVEN"+index;
+            //     }else{
+            //         anchor.get(index).textContent="Some Example  ODD"+index;
+            //     }
+                  
+            // })
+            anchor.each(function(aaaa){
+                if(aaaa%2==0){
+                    anchor.get(aaaa).textContent="Some Example  EVEN"+aaaa;
+                }else{
+                    anchor.get(aaaa).textContent="Some Example  ODD"+aaaa;
+                }
+                  
+            });
+
+
+            // $('div.d1').toggle(5000);
+            // $('a:first').hide();
+            // let number = $('#UName').val();
+            // let table= $('<table/>');
+            // let table_head= $('<thead/>');
+            // let table_head_row =$('<tr/>');
+            // table_head_row.append('<th> Some header</th>');
+            // table.append(table_head);
+            // table_head.append(table_head_row);
+
+            // for (let ctr=1;ctr<=10;ctr++){
+            //     let table_body_row =$('<tr/>');
+            //     table_body_row.append('<td>'+number+'</td> <td>X</td> <td>'+ctr+'</td><td>=</td> <td>'+(number*ctr)+'</td>');
+            //     table.append(table_body_row);
+            // }
+
+            // $('#ResultDiv').html(table);
+            
+            
+        })
+        
+    }
+);
+    // alertonready=function (){
+    //     alert('I am Loaded ');
+    // }
+    // $().ready(function (){
+    //     $('#BtnSubmit').click(function(){
+    //             alert($('#UName').val());
+    //     });
+    // }); 
+
+    // document.getElementById('SomeId'); // please select the element having SomeId
+    // // # 
+    // // .
+    // // TagName
+    // $('#SomeId').val();
+
+</script>
+</html>
