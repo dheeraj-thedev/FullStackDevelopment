@@ -9,6 +9,11 @@ The jQuery library contains the following features:
 - AJAX
 - Utilities
 
+
+#### It is solves the purpose for which JavaScript is being used but i has many advantages, like it shortens the login we write additionaly it works on selectors that provides much flexibility while modifying or manipulation or quering the real dom from the browser 
+
+### How can I use Jquery on my HTML to practice the same ?
+
 1. Jquery 
     but JavaScrip Library that simplies javaScript
 
