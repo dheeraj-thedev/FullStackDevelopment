@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <button id="checkArray">Test</button>
+
+<table id="Data" style="border: 2px solid black;">
+
+</table>
+</head>
+<body>
+    
+</body>
+
+<script>
+ matrix = [];
+
+
+ let table = document.getElementById('Data');
+    // 12 12 31 13
+    // 1 2 3 4 
+    // 43 23 21 32
+    const btn = document.querySelector('button');
+    btn.onclick = function (e) {
+   
+    matrix[0] = [12,12,31,13];
+    matrix[1]= [1,2,3,4];
+    matrix[2]= [43,23, 21, 32];
+    matrix[3] = [12,12,31,13,424,323,43,43,43];
+    matrix[4]= [1,2,3,4];
+    matrix[5]= [43,23, 21, 32];
+
+    for (let row =0;row<matrix.length;row++){  //
+        let rowTable=  table.insertRow(row);
+        for ( let col =0;col<matrix[row].length;col++){
+            let cellRef= rowTable.insertCell(col);
+            cellRef.innerHTML=matrix[row][col];//'Col 4';
+        }
+    }
+
+    
+}
+
+
+</script>
+
+<!-- <script>
+    const btn = document.querySelector('button');
+btn.onclick = function (e) {
+    // let mynum =10;
+    // let myStr='string ' or "dasdjsa";
+    let myValues = [12,121,121,21,21,2232,3221,2121,212,121,21,21,21,2121];
+    // What is loop Iteration Iterator
+    // Do While For 
+    // from to strat 
+    // till when to repeat
+    // step 
+    for (let ctr =0;ctr<myValues.length;ctr++){
+        if(myValues[ctr]%2==0){
+            alert("myValue["+ctr+"]"+ myValues[ctr] + "Even");
+        }
+        else{
+            alert("myValue["+ctr+"]"+ myValues[ctr] + "Odd");
+        }
+    }
+    // alert(myValues.length);
+}
+
+
+
+
+</script> -->
+</html>

@@ -1,0 +1,164 @@
+<!-- Working with a Employee form 
+FName 
+LName
+DOB  [Date Input] -> it show the age in some label 
+DOJ
+projects [Select -> Will contain Project 
+        ID & Names user can choose multiple projects ]
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <label>
+            fname
+        </label>
+        <input type="text" id="fName" >
+        <br>
+        <label>
+            Experience
+        </label>
+        <input type="text" id="exp" >
+        <br>
+        <label>
+            lname
+        </label>
+        <input type="text" id="lName" >
+        <br>
+        <label>
+            DoJ
+        </label>
+        <input type="date" id="DOJ" >
+        <br>
+        <label>
+            DOB
+        </label>
+        <input type="date" id="DOB" >
+        <br>
+        <label>Projects</label>
+        <select multiple="true" id="projects">
+            <option>--Select Projects--</option>
+            <option>Versata</option>
+            <option>Ford DCM</option>
+            <option>Alterponit</option>
+            <option>Autotroal</option>
+        </select>
+        <button onclick="validate();"> Save The Data</button>
+
+        <!-- <input type="submit"> -->
+
+<!-- 
+<table style="border: 5px solid black;" id="Data">
+    <tr><td>First Name</td><td>last Name</td><td>DOB</td><td>DOJ</td></tr>
+</table> -->
+</body>
+    
+<script>
+
+    employee={
+
+    };
+
+    // // Uncle BoB
+    //     S-Single Responsibility
+    //     O- Open Closed
+    //     L- Liskov Substitution 
+    //     I - Interface Segrigiation
+    //     D - Dependency Injection
+
+        // Dos- we should try our function shall take lesser parameter 
+        //      we should write maintanable code  
+
+
+
+    function getDateString(emp){
+     return   emp.FName+"\n"+emp.lName+"\n"+emp.DateOB+"\n"+emp.DateOJ;
+    }
+
+    // Parameter and argument 
+
+    // <funcction> <ValidName> <()>  <(emp)>
+    //         // if your finction taking params then define these in bracket()
+
+    function validate(){
+    let fname = document.getElementById('fName').value;
+    let lname = document.getElementById('lName').value;
+    let doj = document.getElementById('DOJ').value;
+    let dob = document.getElementById('DOB').value;
+    employee.fname=fname;
+    employee.lname=lname;
+    employee.dob=dob;
+    employee.doj=doj;
+    // FName:fname,
+    // lName:lname,
+    // DateOB:dob,
+    // DateOJ:doj
+    // let employee = {
+    // Exp:exp,
+    // FName:fname,
+    // lName:lname,
+    // DateOB:dob,
+    // DateOJ:doj
+    // };
+       
+        // // let dateofBirth = new Date(); -> Current 
+        // let dateOfBirth = new Date(dob); -> Creae a date based on this value 
+        // let dateOfJoining = new Date(doj);
+     
+
+        // let diff= dateOfJoining.getFullYear()- dateOfBirth.getFullYear();
+        // if(diff<18){
+        //     alert("Look at your Date of joining and Date of birth there is something wrong");
+        // }
+        
+        // // alert('My Locale Date '+dateOfBirth.toLocaleString());
+        // // alert(dateOfBirth);
+        // // alert(doj);
+        // // alert(dob);
+
+    }
+
+
+    // // how to create html elements dynamilyy
+    // function SaveData(){
+    // let fname = document.getElementById('fName').value;
+    // let lname = document.getElementById('lName').value;
+    // let doj = document.getElementById('DOJ').value;
+    // let dob = document.getElementById('DOB').value;
+
+    // let table = document.getElementById('Data');
+
+    //   let row=  table.insertRow(1);
+    //   let fNamecell= row.insertCell(0);
+
+    //   let lNamecell= row.insertCell(1);
+    //   let dojcell= row.insertCell(2);
+    //   let dobcell= row.insertCell(3);
+
+    //   fNamecell.innerHTML= fname;//'Col 1';
+    //   lNamecell.innerHTML=lname;//'Col 2';
+    //   dojcell.innerHTML=doj;//'Col 3';
+    //   dobcell.innerHTML=dob;//'Col 4';
+
+    // }
+
+
+        // 1 writing output to html page  
+        // we have some methoods arranges with in some objects 
+        // OOPs -> 
+
+        // everythin in this world is an object that has following feature:- 
+        //     State
+        //     beahovior`
+        //     UniqueIdentity
+
+</script>
+</html>

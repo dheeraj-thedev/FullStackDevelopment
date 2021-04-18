@@ -1,0 +1,30 @@
+Name-Mynae
+lName-MyLastName
+
+Premant Address->
+                Street
+                HNo
+                Area
+                Pincode
+                State
+                City
+                Country
+
+Cureent
+
+value type and refrence type
+
+let PInfor={
+    Name:"someName",
+    lName:"Some Last",
+    Address={
+         Street:"Some Stree"
+                HNo
+                Area
+                Pincode
+                State
+                City
+                Country
+    }
+}
+
