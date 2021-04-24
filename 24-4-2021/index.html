@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="DataDiv"></div>
+
+    <button id="GetDataFromCarrerEra"> Get Data</button>
+    <table id="data-table">
+        <th>
+        <tr>
+            <td>Location</td>
+            <td>Confirmed Cases Indian</td>
+            <td>Confirmed Cases Foregion</td>
+            <td> Discharged </td>
+            <td>Deaths</td>
+            <td>Total Confirmed</td>
+        </tr>
+
+        </th>
+    </table>
+</body>
+<script>
+
+
+
+    // what is call back ?
+    $("#GetDataFromCarrerEra").click(function(){
+        // $.getJSON(
+        // "https://api.rootnet.in/covid19-in/stats/latest",  // URl End point
+        // function(data){  // Call back for the work
+        //     $.each(data.data, function(i,record){
+        //             alert(i+' '+ record);
+        //     });
+        //    // alert(data.data.summary.total);
+        // });
+
+       let data= {
+        url:"https://api.rootnet.in/covid19-in/stats/latest",
+        method:"get",
+        dataType:"JSON",
+        success: function(data){
+               let regionalData= data.data.regional;
+               $.each(regionalData,function(counter, results){
+                  //  alert(results);
+                    let table_body_row =$('<tr/>');
+                    table_body_row.append('<td>'+results.loc+'</td> <td>'+results.confirmedCasesIndian+'</td> <td>'+results.confirmedCasesForeign+'</td><td>'+results.discharged+'</td> <td>'+results.deaths+'</td><td>'+results.totalConfirmed+'</td>');
+                   $('#data-table').append(table_body_row);
+               });
+
+                //alert("Success"+data.data.summary.total);
+        },
+        error:function(response){
+            alert("Error "+response.error);
+            
+        }};
+        $.ajax(data);
+
+    //     $.ajax({
+    //     url:"https://api.rootnet.in/covid19-in/stats/latest",
+    //     method:"get",
+    //     dataType:"JSON",
+    //     success: function(data){
+    //             alert("Success"+data.data.summary.total);
+    //     },
+    //     error:function(response){
+    //         alert("Error "+response.error);
+            
+    //     }
+    // });
+    });
+</script>
+</html>
