@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Insurance Company Search</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<input id="autocomplete">
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="no-php-error.js"></script>
+
+<script>
+	$( "#autocomplete" ).autocomplete({
+		source: "search.php",
+		minLength: 2
+	});
+</script>
+
+</body>
+</html>

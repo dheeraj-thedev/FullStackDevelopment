@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Customizing Results With a Callback</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<input id="autocomplete">
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	var data = [ "Alligator", "Ant", "Antelope", "Cat",
+	  "Chicken", "Cow" ];
+	$( "#autocomplete" ).autocomplete({
+		source: function( request, response ) {
+			var results = [],
+				term = $.ui.autocomplete.escapeRegex( request.term ),
+				matcher = new RegExp( "^" + term, "i" ),
+				matches = $.grep( data, function( item ) {
+					return matcher.test( item );
+				});
+
+			response( matches );
+		}
+	});
+</script>
+
+</body>
+</html>

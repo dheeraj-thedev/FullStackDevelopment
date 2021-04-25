@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Autocomplete Using Label and Value</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<input id="autocomplete">
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	$( "#autocomplete" ).autocomplete({
+		source: [
+			{ label: "United Kindgdom (UK)", value: "UK" },
+			{ label: "United States of America (USA)", value: "USA" }
+		]
+	});
+</script>
+
+</body>
+</html>

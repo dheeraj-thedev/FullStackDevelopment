@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Datepicker That Changes Locales</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<span id="buttonset">
+	<label for="language-en">English</label>
+	<input type="radio" id="language-en" name="language" value="" checked>
+	<label for="language-es">Español</label>
+	<input type="radio" id="language-es" name="language" value="es">
+</span>
+
+<label for="date">Date:</label>
+<input type="text" name="date" id="date">
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/i18n/datepicker-es.js"></script>
+
+<script>
+	$( "#buttonset" ).buttonset();
+	$( "[name='language']" ).on( "change", function() {
+		$( "#date" )
+		  .datepicker( "option", $.datepicker.regional[ this.value ] );
+	});
+
+	$( "#date" ).datepicker( $.datepicker.regional[ "" ] );
+</script>
+
+</body>
+</html>

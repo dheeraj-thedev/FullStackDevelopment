@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selectmenu Widget With optgroup Elements</title>
+
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+
+	<style>
+		select { width: 200px; }
+	</style>
+</head>
+<body>
+
+<label for="doctor">Doctor:</label>
+<select id="doctor" name="doctor">
+	<option>No Preference</option>
+	<optgroup label="Doctors">
+		<option>Adams</option>
+		<option>Crowley</option>
+		<option>Smith</option>
+		<option>VanToll</option>
+	</optgroup>
+	<optgroup label="Nurses">
+		<option>Davis</option>
+		<option>Johnson</option>
+		<option>Jones</option>
+		<option>White</option>
+	</optgroup>
+</select>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+//	$( "select" ).selectmenu();
+</script>
+
+</body>
+</html>

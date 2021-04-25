@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Datepicker That Disallows Weekends</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<label for="date">Date:</label>
+<input type="text" name="date" id="date">
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	$( "input" ).datepicker({
+		beforeShowDay: $.datepicker.noWeekends
+	});
+</script>
+
+</body>
+</html>

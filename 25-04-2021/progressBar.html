@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
+    integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" 
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    <button id="startProgress">Start Progres</button>
+
+    <div id="wrapper" style="
+    border: 2px solid green;
+    margin: 10px; 
+    width:400px;">
+        <div id="boxProg" style="
+        background: greenyellow;
+        height: 20px;
+         width: 1px; 
+         border: 1px solid green;"></div>
+    </div>
+    <p id="output">1 %</p>
+</body>
+
+<script>
+    $().ready(function(){
+        $('#startProgress').click(function(){
+
+            $('#some').queue()
+            $('#boxProg').animate(
+                {
+                    width:"400px"
+                },
+                {
+                     duration:5000,
+                     easing:"swing",
+                      step:function(x){
+                            $('#output').text(Math.round(x * 100 / 400) + " % ");
+                      },
+                      complete:function(){
+                        $('#output').text('File is uploaded Sucessfully');
+                      }
+                }
+            );
+        });
+    });
+</script>
+</html>

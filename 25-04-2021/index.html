@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
+    integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" 
+    crossorigin="anonymous">
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+     
+        .myDiv{
+            background-color: cadetblue;
+            height: 100px;
+            width: 100px;
+        }
+        .postEffect{
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="text" id="msgLabel" value="The Result" > -->
+    <button id="animateBtnS">Animate This Swing</button>
+    <button id="animateBtnL">Animate This Linear</button>
+    <div id="myDiv" class="myDiv"></div>
+   
+
+</body>
+<script>
+    //Linier  
+    // $(document).ready(function(){
+    //     $('#animateBtnL').click(function(){
+    //         $('#myDiv').animate({
+    //             height:'+=200px',
+    //             width:'+=200px',
+    //         },
+    //         5000,
+    //         "linear",  
+    //         function(){
+    //             $('#myDiv').removeClass('myDiv');
+    //             $('#myDiv').addClass('postEffect');
+    //                // $("#msgLabel").val('animation is performed');
+    //         }
+    //         );
+    //     });
+    // });
+
+    // Swing
+    // $(document).ready(function(){
+    //     $('#animateBtnS').click(function(){
+    //         $('#myDiv').animate({
+    //             height:'+=200px',
+    //             width:'+=200px'
+    //         },
+    //         5000,
+    //         "swing"
+    //         );
+    //     });
+    // });
+</script>
+
+<script>
+    // alternate Syntax for above 
+    // $("#myBox").animate(
+    //     { border:3px;} ,
+    //    { duration:450}
+
+
+    $(document).ready(function(){
+        function CallBackAfterAnimation (){
+                $(this).after("<p> Animation was performed !</p>");
+        }
+        let css={
+                height:'+=200px',
+                width:'+=200px'
+            }
+        let optns={
+                duration:4000,
+                easing:'linear',
+                complete:CallBackAfterAnimation
+            }
+        $('#animateBtnS').click(function(){
+            $('#myDiv').animate(css,optns);
+        });
+    });
+</script>
+</html>

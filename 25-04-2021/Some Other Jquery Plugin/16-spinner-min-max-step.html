@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spinner With min, max, and step Options Set</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+
+<input id="spinner">
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	$( "#spinner" ).spinner({
+		min: 0,
+		max: 100,
+		step: 10
+	});
+</script>
+
+</body>
+</html>

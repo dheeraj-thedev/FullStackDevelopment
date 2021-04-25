@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
+    integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" 
+    crossorigin="anonymous"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            left:10px;
+            top:100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+        <button>Bein Animate</button>
+        <p>Length of Queue is = <span></span></p>
+        <div></div>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+            $('button').click(function(){
+                    let myDiv = $('div');
+                    myDiv.animate({height:250},"slow");  // 1 minutes
+                    myDiv.animate({left:"+=200",top:"+=100"},"slow"); //30sec
+                    myDiv.animate({left:"+=200",top:"+=100"},"slow"); //20
+                    $('span').text(myDiv.queue().length);
+                    var myQue= myDiv.queue();
+                    
+                    $('span').text($('span').text()+" "+myQue);
+
+                    alert('Some Message');
+            });
+    });
+</script>
+</html>

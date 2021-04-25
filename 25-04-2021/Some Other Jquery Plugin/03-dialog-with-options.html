@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dialog with title and buttons Options Set</title>
+	<link href="../css/jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+<button>OpenDialog</button>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-ui.js"></script>
+
+<script>
+	$('button').click( function(){
+
+	$( "<div>Your files have been successfully uploaded.</div>" ).dialog({
+		buttons: {
+			OK: function() {}
+		},
+		title: "Success"
+	});
+	});
+</script>
+
+</body>
+</html>
