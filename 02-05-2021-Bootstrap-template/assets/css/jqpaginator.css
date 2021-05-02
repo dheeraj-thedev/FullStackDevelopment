@@ -1,0 +1,23 @@
+.jqpaginator { position: relative; }
+.jqpaginator .jqp-wrap {
+    display: block; margin: 0 auto; max-width: 540px;
+    position: relative; text-align: center;
+}
+.jqpaginator .jqp-wrap .jqp-input {
+    display: block; margin: 0 auto; width: 100px;
+}
+.jqpaginator .jqp-wrap .jqp-prev,
+.jqpaginator .jqp-wrap .jqp-next,
+.jqpaginator .jqp-wrap .jqp-pages { display: inline-block; }
+.jqpaginator .jqp-wrap .jqp-pages { padding: 0; margin: 0; }
+.jqpaginator .jqp-wrap .jqp-pages li {
+    cursor: default; display: inline-block; padding: 5px 10px;
+}
+.jqpaginator .jqp-wrap .jqp-pages li.jqp-page,
+.jqpaginator .jqp-wrap button { cursor: pointer; }
+.jqpaginator .jqp-wrap .jqp-pages li.jqp-active {
+    cursor: default; font-weight: bold;
+}
+.jqpaginator .jqp-wrap button .jqp-disable {
+    color: #BBBBBB; cursor: default; pointer-events: none;
+}
