@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <!-- // ES5 -->
+  <script>
+    function Car() {
+      this._fuel = 0
+      this.distance = 0
+    }
+
+    Car.prototype.move = function () {
+      if (this._fuel < 1) {
+        throw new RangeError('Fuel tank is depleted')
+      }
+      this._fuel--
+      this.distance += 2
+    }
+    Car.prototype.addFuel = function () {
+      if (this._fuel >= 60) {
+        throw new RangeError('Fuel tank is full')
+      }
+      this._fuel += 10
+    }
+
+    var mercedees = new Car()
+    //console.log('distance :' + mercedees.distance)
+    // alert('Fuel:' + mercedees.fuel)
+    // alert('distance :' + mercedees.distance)
+    mercedees.addFuel()
+    mercedees.move()
+    // console.log('distance :' + mercedees.distance)
+    // console.log('Fuel:' + mercedees.fuel)
+    // alert('Fuel:' + mercedees.fuel)
+    // alert('distance :' + mercedees.distance)
+
+    //var oldmecedees = Car // i am refencing a function
+    // we are calling it
+    // console.log(typeof mecedees)
+    // console.log(typeof oldmecedees)
+  </script>
+</html>
