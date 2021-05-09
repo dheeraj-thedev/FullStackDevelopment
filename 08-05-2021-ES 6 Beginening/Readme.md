@@ -2,13 +2,13 @@ CCMA
 
 We are going to start with ES-6 {ECMA-2015}
 
-OK Let const temporal dead zome
-Doing Desstructuring Assignment
-Arrow & block level functions
-paramters -> default, Rest , spread
-Template & object Literal
-Classes
-Modules
+#### OK Let const temporal dead zome
+#### Doing Desstructuring Assignment
+#### Arrow & block level functions
+#### paramters -> default, Rest , spread
+#### Template & object Literal
+#### Classes
+#### Modules
 
 What is ES -6 {ECMA : European Computer Manufacurer Association -> {ECMA-2025}
 
