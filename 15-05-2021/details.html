@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <button onclick="callingScript()">Load Script</button>
+  </head>
+  <body></body>
+
+  <script>
+    function callingScript() {
+      loadScript('alertexample.js', function () {
+        //   alert('Hellow I am called')
+        showAlert()
+      })
+    }
+
+    // function test(cB, someData) {
+    //   cB(someData)
+    // }
+    function loadScript(src, callB) {
+      let script = document.createElement('script')
+      script.src = src
+      script.onload = () => callB(script)
+      //   script.onload = test(callB(script))
+      document.head.append(script)
+    }
+  </script>
+</html>
+
+
+
+<!-- Promise
+
+ ApI => asdf.com/v1/api/user
+
+ my code i want call this api and get the result 

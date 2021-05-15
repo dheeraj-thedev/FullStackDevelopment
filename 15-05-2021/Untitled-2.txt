@@ -1,0 +1,7 @@
+
+
+
+1. install Node from node js 
+2. npm create-create-app my-first-app
+
+boilerplate code =>
