@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="gitUserId" placeholder="Please Enter Your Github Id" />
+    <button id="userDetails">Get The Git User Details</button> // we did
+    <button id="gitRepoList">Get Repositories</button> // this is an assignment
+    wherein yoiu will be reading the repo list
+    <img id="avatar" src="" />
+
+    <div id="UserDetailsDiv"></div>
+    <div id="gitRepoListDiv"></div>
+  </body>
+
+  <script>
+    function makeAjaxReq(url, methodType, callback) {
+      // XHR
+      var xhr = new XMLHttpRequest()
+      xhr.open(methodType, url, true) // true async | false sync
+      xhr.send()
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          console.log('ready State Changed ' + xhr.readyState)
+          console.log('state', xhr.readyState)
+          console.log('The XHR Completed')
+          var resp = xhr.responseText
+          var jsonRep = JSON.parse(resp)
+          console.log('Response' + jsonRep)
+          callback(jsonRep)
+        }
+      }
+    }
+    document
+      .getElementById('userDetails')
+      .addEventListener('click', function () {
+        let gitUserId = document.getElementById('gitUserId').value
+        let URL = 'https://api.github.com/users/' + gitUserId
+        try {
+          makeAjaxReq(URL, 'GET', processUserDetails)
+        } catch (error) {
+          console.log('Error ' + error)
+        }
+
+        //alert(gitUserId)
+      })
+
+    function processUserDetails(userData) {
+      console.log(JSON.stringify(userData))
+      // let dummydata = { name: 'Dheeraj', age: 31, contact: '9718910927' }
+      for (const [key, value] of Object.entries(userData)) {
+        console.log(`The key is : ${key} while value is : ${value}`)
+      }
+      // let { login, id, node_id, avatar_url } = userData
+
+      // console.log(login, id, node_id, avatar_url)
+
+      // document.getElementById('avatar').src = avatar_url
+
+      // document.getElementById('UserDetailsDiv').innerHTML = 'Id '
+    }
+  </script>
+</html>

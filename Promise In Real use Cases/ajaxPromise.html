@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnRequest">Initiate</button>
+  </body>
+
+  <script>
+    let profiles = [
+      'dheeraj-thedev',
+      'RAMAMDJADFJAHDJAJDHJADHAJ',
+      'eugenelim218',
+      'apaar-007',
+      'RAMAMDJADFJAHDJAJDHJADHAdasdasjkfjkdsfkds',
+      'shik28tech',
+    ]
+
+    document
+      .getElementById('btnRequest')
+      .addEventListener('click', function () {
+        executeRepos('https://api.github.com/users/dheeraj-thedev/repos')
+          .then((result) => {
+            console.log(result)
+          })
+          .catch((error) => console.log(error))
+        console.log(data)
+      })
+
+    function getRepos(urlResourse) {
+      return new Promise((resolve, reject) => {
+        $.ajax({
+          url: urlResourse, //'https://api.github.com/users/dheeraj-thedev/repos',
+          type: 'Get',
+          success: function (data) {
+            resolve(data)
+          },
+          error: function (error) {
+            reject(error)
+          },
+        })
+      })
+    }
+
+    const executeRepos = async function (url) {
+      try {
+        const promiseResult = await getRepos(url)
+        return promiseResult
+      } catch (e) {
+        console.log(e)
+      }
+    }
+
+    //=================   these two function making ajax calls
+    // function getRepos(urlResourse) {
+    //   return new Promise((resolve, reject) => {
+    //     $.ajax({
+    //       url: urlResourse, //'https://api.github.com/users/dheeraj-thedev/repos',
+    //       type: 'Get',
+    //       success: function (data) {
+    //         resolve(data)
+    //       },
+    //       error: function (error) {
+    //         reject(error)
+    //       },
+    //     })
+    //   })
+    // }
+    // function getProfile(urlResourse) {
+    //   return new Promise((resolve, reject) => {
+    //     $.ajax({
+    //       url: urlResourse, //'https://api.github.com/users/dheeraj-thedev',
+    //       type: 'Get',
+    //       success: function (data) {
+    //         resolve(data)
+    //       },
+    //       error: function (error) {
+    //         reject(error)
+    //       },
+    //     })
+    //   })
+    // }
+
+    // 1  "dfjaskfkas"
+    // 2  "dasjdas"
+    // 3  "djaskdjask"
+    //====================  this was for an array
+    // document
+    //   .getElementById('btnRequest')
+    //   .addEventListener('click', function () {
+    //     for (let i = 0; i < profiles.length; i++) {
+    //       getProfile('https://api.github.com/users/' + profiles[i])
+    //         .then((data) => {
+    //           console.log('Start Profile Data' + profiles[i])
+    //           console.log(data)
+    //           console.log('End Profile Data' + profiles[i])
+    //           getRepos('https://api.github.com/users/' + profiles[i] + '/repos')
+    //             .then((repos) => {
+    //               console.log('Start Repo Data' + profiles[i])
+    //               console.log(data)
+    //               console.log('End Repo Data' + profiles[i])
+    //             })
+    //             .catch((error) => {
+    //               console.log(error)
+    //             })
+    //         })
+    //         .catch((error) => {
+    //           console.log(error)
+    //         })
+    //     }
+    //   })
+
+    //====================  this was for one record
+    // async await ==> the code below implements autoatically
+    // document
+    //   .getElementById('btnRequest')
+    //   .addEventListener('click', function () {
+    //     getProfile('https://api.github.com/users/dheeraj-thedev')
+    //       .then((data) => {
+    //         console.log(data)
+    //         getRepos('https://api.github.com/users/dheeraj-thedev/repos')
+    //           .then((repos) => {
+    //             console.log(data)
+    //           })
+    //           .catch((error) => {
+    //             console.log(error)
+    //           })
+    //       })
+    //       .catch((error) => {
+    //         console.log(error)
+    //       })
+    //   })
+
+    // getProfile  => i will get the or 404
+    //                should the repository list for this user
+  </script>
+</html>
+<!-- // You have been given a task for searching an excel sheet by using a jquery
+code and you have to plan an excellent flow so that could get the data from git
+hub api sr no | userNames 1 | dheeraj-thedev 2 | sridhar 3 | venkatSubramanyam
+you have two tasks 1. Search Profile A if found get the Repository list and
+print it -->
