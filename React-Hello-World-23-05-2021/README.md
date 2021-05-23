@@ -1,5 +1,7 @@
 need to doenload this from github 
-1. npm install at the root of your project 
+1. npx or yarn install at the root of your project 
+2. npx or yarn start to start the project 
+3. you will get it on localhost:3000 
 
 
 
