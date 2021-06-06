@@ -1,3 +1,111 @@
+<ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m uk-grid" style="transform: translate3d(0px, 0px, 0px);">
+                            <li tabindex="-1" class="uk-active">
+                                <a href="course-lesson-1.html">
+                                    <div class="course-card-resume">
+                                        <div class="course-card-resume-thumbnail">
+                                            <img src="../assets/images/course/2.png">
+                                        </div>
+                                        <div class="course-card-resume-body">
+                                            <h5>Angular Fundamentals From Scratch To Experts</h5>
+                                            <span class="number"> 3/20 </span>
+                                            <div class="course-progressbar">
+                                                <div class="course-progressbar-filler" style="width:65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li tabindex="-1" class="uk-active"> <a href="course-lesson-1.html">
+                                    <div class="course-card-resume">
+                                        <div class="course-card-resume-thumbnail">
+                                            <img src="../assets/images/course/1.png">
+                                        </div>
+                                        <div class="course-card-resume-body">
+                                            <h5> Ultimate Web Designer And Developer Course </h5>
+                                            <span class="number"> 3/20 </span>
+                                            <div class="course-progressbar">
+                                                <div class="course-progressbar-filler" style="width:65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li tabindex="-1" class="uk-active"> <a href="course-lesson-1.html">
+                                    <div class="course-card-resume">
+                                        <div class="course-card-resume-thumbnail">
+                                            <img src="../assets/images/course/7.png">
+                                        </div>
+                                        <div class="course-card-resume-body">
+                                            <h5> Bootstrap Framework From Scratch To Experts </h5>
+                                            <span class="number"> 3/20 </span>
+                                            <div class="course-progressbar">
+                                                <div class="course-progressbar-filler" style="width:65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li tabindex="-1" class="uk-active">
+                                <a href="course-lesson-1.html">
+                                    <div class="course-card-resume">
+                                        <div class="course-card-resume-thumbnail">
+                                            <img src="../assets/images/course/3.png">
+                                        </div>
+                                        <div class="course-card-resume-body">
+                                            <h5> Ultimate Web Designer And Developer Course </h5>
+                                            <span class="number"> 3/20 </span>
+                                            <div class="course-progressbar">
+                                                <div class="course-progressbar-filler" style="width:65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li tabindex="-1" class="uk-active">
+                                <a href="course-lesson-1.html">
+                                    <div class="course-card-resume">
+                                        <div class="course-card-resume-thumbnail">
+                                            <img src="../assets/images/course/4.png">
+                                        </div>
+                                        <div class="course-card-resume-body">
+                                            <h5>Angular Fundamentals From Scratch To Experts</h5>
+                                            <span class="number"> 3/20 </span>
+                                            <div class="course-progressbar">
+                                                <div class="course-progressbar-filler" style="width:65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li tabindex="-1" class=""> <a href="course-lesson-1.html">
+                                    <div class="course-card-resume">
+                                        <div class="course-card-resume-thumbnail">
+                                            <img src="../assets/images/course/1.png">
+                                        </div>
+                                        <div class="course-card-resume-body">
+                                            <h5> Ultimate Web Designer And Developer Course </h5>
+                                            <span class="number"> 3/20 </span>
+                                            <div class="course-progressbar">
+                                                <div class="course-progressbar-filler" style="width:65%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li> 
+                        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Important Links for Discussion - difference between block level or inline
 
 https://stackoverflow.com/questions/1714121/block-level-elements-inside-inline-elements#:~:text=An%20element%20defined%20as%20a,%3B%22%3ELorem...&text=The%20will%20still%20be,in%20the%20eyes%20of%20HTML.
